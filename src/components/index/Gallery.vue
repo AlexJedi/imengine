@@ -1,11 +1,10 @@
 <template lang='pug'>
-  .about
-    h1 HERE is JOHNNY
+  .gallery
 </template>
 
 <script>
 export default {
-  name: 'about',
+  name: 'gallery',
 };
 </script>
 

@@ -1,19 +1,34 @@
 <template lang='pug'>
   .app
-    about
+    main-header
+    index
+    main-footer
 </template>
 
 <script>
-import About from '@/components/About';
+import MainHeader from '@/components/MainHeader';
+import MainFooter from '@/components/MainFooter';
+
+import Index from '@/components/Index';
 
 export default {
   name: 'app',
   components: {
-    About,
+    MainHeader,
+    MainFooter,
+    Index,
   },
 };
 </script>
 
-<style>
+<style lang='scss'>
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic');
 
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
 </style>
