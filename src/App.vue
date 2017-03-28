@@ -22,13 +22,15 @@ export default {
 </script>
 
 <style lang='scss'>
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
 
 html {
   font-size: 62.5%;
 }
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
   position: relative;
 }
 </style>

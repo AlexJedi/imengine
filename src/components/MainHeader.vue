@@ -54,6 +54,7 @@ export default {
 }
 .header__nav {
   font-size: 1.8rem;
+  font-weight: 400;
   letter-spacing: 0.2rem;
 }
 .nav__link {
@@ -62,7 +63,6 @@ export default {
 .nav__btn {
   border: 1px solid $color-white;
   padding: 1rem 2rem;
-  transition: 1s;
   &:hover {
     background-color: $color-white;
     color: $color-blue;
