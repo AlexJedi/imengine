@@ -15,5 +15,7 @@ export default {
 </script>
 
 <style lang='scss'>
-
+.index {
+  width: 100%;
+}
 </style>
