@@ -44,10 +44,7 @@ export default {
   width: 7rem;
   height: 7rem;
   margin-right: 1rem;
-  background-image: url('../assets/logo.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  background: url('../assets/logo.svg') no-repeat center / contain;
 }
 .logo__name {
   margin: 0;
