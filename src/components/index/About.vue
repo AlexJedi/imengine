@@ -80,10 +80,11 @@ export default {
 }
 .article__content {
   width: 50rem;
-  padding: 2rem 0;
+  padding: 2rem 0 6rem;
   border-radius: 5px;
   background-color: $color-white;
   box-shadow: $shadow;
+  position: relative;
 }
 .article__header {
   display: flex;
@@ -137,7 +138,10 @@ export default {
   padding-left: 2rem;
 }
 .article__action {
-  margin: 0 auto;
+  position: absolute;
+  bottom: 2rem;
+  left: calc(50% - 8rem);
+  z-index: 10;
 }
 .about__content {
   width: 40%;
@@ -161,7 +165,7 @@ export default {
   bottom: 0;
   left: $padding-page / 2;
   width: 30%;
-  height: 40rem;
+  height: 37rem;
   background: url('../../assets/img/vrwoman.png') no-repeat center bottom / contain;
 }
 .banner__line {
