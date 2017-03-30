@@ -3,12 +3,14 @@
     intro
     about
     prise
+    equipment
 </template>
 
 <script>
 import Intro from './index/Intro';
 import About from './index/About';
 import Prise from './index/Prise';
+import Equipment from './index/Equipment';
 
 export default {
   name: 'index',
@@ -16,6 +18,7 @@ export default {
     Intro,
     About,
     Prise,
+    Equipment,
   },
 };
 </script>
