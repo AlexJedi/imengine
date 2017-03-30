@@ -12,7 +12,7 @@
         header.article__header
           span.line.header__line
           span.header__title Latest article
-        h2.article__title Reality or not?
+        h2.article__title.section__title Reality or not?
         figure.article__img
           img(src='../../assets/img/glasses.png')
         .article__info
@@ -54,7 +54,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  color: $color-gray;
 }
 .about__article {
   position: absolute;
@@ -81,7 +80,7 @@ export default {
 .article__content {
   width: 50rem;
   padding: 2rem 0 6rem;
-  border-radius: 5px;
+  border-radius: $border-radius;
   background-color: $color-white;
   box-shadow: $shadow;
   position: relative;
@@ -90,7 +89,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem 0 6rem;
+  padding: 0 $padding-section 0 6rem;
 }
 .line {
   display: block;
@@ -108,12 +107,15 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
-.article__title {
+.section__title {
   font-size: 4.8rem;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
-  padding: 2rem 6rem;
   margin: 0;
+  color: $color-dark;
+}
+.article__title {
+  padding: 2rem 6rem;
 }
 .article__img {
   background-color: $color-blue;

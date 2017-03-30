@@ -1,6 +1,6 @@
 <template lang='pug'>
   .prise
-    .prise__card(v-for='n in 3')
+    .prise__card.card(v-for='n in 3')
       .card__line.line
       .card__time
         h2.time__title 30
@@ -29,17 +29,19 @@ export default {
   justify-content: space-between;
 }
 .prise__card {
-  width: 32rem;
-  background-color: $color-white;
+  width: 20%;
+  position: relative;
   box-shadow: $shadow;
-  padding: 3rem;
+}
+.card {
+  border-radius: $border-radius;
+  background-color: $color-white;
+  padding: $padding-section;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: $color-gray;
   text-align: center;
-  position: relative;
 }
 .card__line {
   position: absolute;

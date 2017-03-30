@@ -23,6 +23,7 @@ export default {
 
 <style lang='scss'>
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
+@import '~style';
 
 html {
   font-size: 62.5%;
@@ -32,5 +33,6 @@ body {
   font-size: 1.6rem;
   font-weight: 300;
   position: relative;
+  color: $color-gray;
 }
 </style>
