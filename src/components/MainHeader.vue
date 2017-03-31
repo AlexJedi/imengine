@@ -4,9 +4,9 @@
       a.logo__link
       h2.logo__name IMENGINE
     nav.header__nav
-      a.nav__link(v-for='anchor in anchors'
+      a.header__link(v-for='anchor in anchors'
       @click='') {{ anchor }}
-      a.nav__link.nav__btn Try it now
+      a.header__link.nav__btn Try it now
 </template>
 
 <script>
@@ -41,6 +41,7 @@ export default {
   align-items: center;
 }
 .logo__link {
+  display: block;
   width: 7rem;
   height: 7rem;
   margin-right: 1rem;
@@ -57,7 +58,7 @@ export default {
   font-weight: 400;
   letter-spacing: 0.2rem;
 }
-.nav__link {
+.header__link {
   margin: 0 1rem;
 }
 .nav__btn {
