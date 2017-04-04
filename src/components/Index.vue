@@ -2,16 +2,18 @@
   .index
     intro
     about
-    prise
+    price
     equipment
+    gallery
     comments
 </template>
 
 <script>
 import Intro from './index/Intro';
 import About from './index/About';
-import Prise from './index/Prise';
+import Price from './index/Price';
 import Equipment from './index/Equipment';
+import Gallery from './index/Gallery';
 import Comments from './index/Comments';
 
 export default {
@@ -19,8 +21,9 @@ export default {
   components: {
     Intro,
     About,
-    Prise,
+    Price,
     Equipment,
+    Gallery,
     Comments,
   },
 };
