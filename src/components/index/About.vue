@@ -136,7 +136,7 @@ export default {
 }
 .like {
   color: $color-gray;
-  background: url('../../assets/img/heart.svg') no-repeat left center;
+  background: url('../../assets/img/icons/heart.svg') no-repeat left center;
   padding-left: 2rem;
 }
 .article__action {

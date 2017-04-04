@@ -20,7 +20,7 @@ export default {
 @import '~style';
 
 .comments {
-  background-color: $color-lightgray;
+  background: linear-gradient(to bottom, $color-purple 0%, $color-blue 100%);;
   padding: $padding-page;
   display: flex;
   justify-content: space-between;
