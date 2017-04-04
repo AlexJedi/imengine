@@ -1,42 +1,50 @@
 <template lang='pug'>
-  .prise
-    .prise__card.card(v-for='n in 3')
-      .card__line.line
-      .card__time
-        h2.time__title 30
-        span.time__subtitle min
-      .card__values
-        span (main/student/school)
-        span.values__list 600/550/500
-      p.card__description
-        | Hendrerit delicatissimi an cum, quo ea zril aperiri albucius. Vel te
-        | vero vocent prompta, mei ferri antiopam corrumpit ut.
+  .price
+    .price__container
+      .card.price__card(v-for='n in 3')
+        .line.card__line
+        .card__time
+          h2.time__title 30
+          span.time__subtitle min
+        .card__values
+          span (main/student/school)
+          span.values__list 600/550/500
+        p.card__description
+          | Hendrerit delicatissimi an cum, quo ea zril aperiri albucius. Vel te
+          | vero vocent prompta, mei ferri antiopam corrumpit ut.
+    a.btn.price__action Book now
 </template>
 
 <script>
 export default {
-  name: 'prise',
+  name: 'price',
 };
 </script>
 
 <style lang='scss'>
 @import '~style';
 
-.prise {
-  background-color: $color-blue;
+.price {
+  background: linear-gradient(to bottom, $color-blue 0%, $color-purple 100%);;
   padding: $padding-page;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
-.prise__card {
+.price__container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8rem;
+}
+.price__card {
   width: 20%;
   position: relative;
-  box-shadow: $shadow;
 }
 .card {
   border-radius: $border-radius;
   background-color: $color-white;
   padding: $padding-section;
+  box-shadow: $shadow;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
