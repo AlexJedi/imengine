@@ -1,7 +1,7 @@
 <template lang='pug'>
   .app
     main-header
-    index
+    router-view
     main-footer
 </template>
 
@@ -9,14 +9,11 @@
 import MainHeader from '@/components/MainHeader';
 import MainFooter from '@/components/MainFooter';
 
-import Index from '@/components/Index';
-
 export default {
   name: 'app',
   components: {
     MainHeader,
     MainFooter,
-    Index,
   },
 };
 </script>
