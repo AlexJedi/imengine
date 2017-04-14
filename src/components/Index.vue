@@ -4,7 +4,7 @@
     about
     price
     equipment
-    gallery
+    slider
     comments
 </template>
 
@@ -13,7 +13,7 @@ import Intro from './index/Intro';
 import About from './index/About';
 import Price from './index/Price';
 import Equipment from './index/Equipment';
-import Gallery from './index/Gallery';
+import Slider from './index/Slider';
 import Comments from './index/Comments';
 
 export default {
@@ -23,7 +23,7 @@ export default {
     About,
     Price,
     Equipment,
-    Gallery,
+    Slider,
     Comments,
   },
 };
