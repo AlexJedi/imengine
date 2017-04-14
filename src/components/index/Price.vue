@@ -40,17 +40,6 @@ export default {
   width: 20%;
   position: relative;
 }
-.card {
-  border-radius: $border-radius;
-  background-color: $color-white;
-  padding: $padding-section;
-  box-shadow: $shadow;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
 .card__line {
   position: absolute;
   top: 3rem;

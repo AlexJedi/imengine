@@ -39,3 +39,15 @@ $border-radius: 5px;
     background-color: $color-purple;
   }
 }
+
+.card {
+  border-radius: $border-radius;
+  background-color: $color-white;
+  padding: $padding-section;
+  box-shadow: $shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
