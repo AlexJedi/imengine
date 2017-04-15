@@ -1,11 +1,25 @@
 <template lang='pug'>
   .gallery
+    start
+    news
+    catalog
+    sponsors
 </template>
 
 <script>
+import Start from './gallery/Start';
+import News from './gallery/News';
+import Catalog from './gallery/Catalog';
+import Sponsors from './gallery/Sponsors';
+
 export default {
   name: 'gallery',
-  components: {},
+  components: {
+    Start,
+    News,
+    Catalog,
+    Sponsors,
+  },
 };
 </script>
 
