@@ -1,41 +1,41 @@
 <template lang='pug'>
   .equipment
-    .card.equipment__card
-      .equipment__description
-        h2.equipment__title.section__title EQUIPMENT &amp; DEVICES
-        p.description__text
+    .card.card-equipment
+      .description
+        h2.title EQUIPMENT &amp; DEVICES
+        p.text
           | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           | minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           | aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
           | in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        a.btn.equipment__action View Gallery
-        .img__htc.equipment__img
-        .equipment__number 01
-    .card.equipment__card.equipment__card--left
-      .equipment__description
-        h2.equipment__title.section__title EQUIPMENT &amp; DEVICES
-        p.description__text
+        a.btn.equipment-action View Gallery
+        .img-htc.img
+        .number 01
+    .card.card-equipment.card-equipment--left
+      .description
+        h2.title EQUIPMENT &amp; DEVICES
+        p.text
           | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           | minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           | aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
           | in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        a.btn.equipment__action View Gallery
-        .img__pc.equipment__img
-        .equipment__number.equipment__number--left 02
-    .card.equipment__card
-      .equipment__description
-        h2.equipment__title.section__title EQUIPMENT &amp; DEVICES
-        p.description__text
+        a.btn.equipment-action View Gallery
+        .img-pc.img
+        .number.number--left 02
+    .card.card-equipment
+      .description
+        h2.title EQUIPMENT &amp; DEVICES
+        p.text
           | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           | minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           | aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
           | in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        a.btn.equipment__action View Gallery
-        .img__controllers.equipment__img
-        .equipment__number 03
+        a.btn.equipment-action View Gallery
+        .img-controllers.img
+        .number 03
 </template>
 
 <script>
@@ -44,7 +44,7 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import '~style';
 
 .equipment {
@@ -52,25 +52,28 @@ export default {
   padding: $padding-page;
   position: relative;
 }
-.equipment__card {
+.card-equipment {
   padding: 8rem;
-  margin-bottom: 25rem;
+  margin-bottom: 20rem;
+  margin-left: 33%;
   align-items: flex-start;
   text-align: left;
   position: relative;
+  width: 55%;
 }
-.equipment__card--left {
+.card-equipment--left {
   align-items: flex-end;
+  margin-left: 0;
 }
-.equipment__description {
+.description {
   width: 50%;
 }
-.equipment__title,
-.description__text {
+.title,
+.text {
   margin-top: 0;
   margin-bottom: 3rem;
 }
-.equipment__img {
+.img {
   position: absolute;
   bottom: 15rem;
   right: 8rem;
@@ -79,36 +82,46 @@ export default {
   border-radius: $border-radius;
   background: linear-gradient(to bottom, rgba(235,195,253,1) 0%, rgba(134,197,252,1) 100%);
 }
-.img__htc {
+.img-htc {
   background:
     url('../../assets/img/htc.png') no-repeat center center / 80%,
     linear-gradient(to bottom, rgba(235,195,253,1) 0%, rgba(134,197,252,1) 100%);
 }
-.img__pc {
+.img-pc {
   right: auto;
   left: 8rem;
   background:
     url('../../assets/img/pc.png') no-repeat center center / 60%,
     linear-gradient(to bottom, rgba(235,195,253,1) 0%, rgba(134,197,252,1) 100%);
 }
-.img__controllers {
+.img-controllers {
   background:
     url('../../assets/img/controllers.png') no-repeat center center / 80%,
     linear-gradient(to bottom, rgba(235,195,253,1) 0%, rgba(134,197,252,1) 100%);
 }
-.equipment__number {
+.number {
   position: absolute;
   bottom: -18rem;
   right: -2rem;
   font-size: 25rem;
   font-weight: 700;
-  color: $color-lightgray;
+  color: darken($color-lightgray, 3);
   user-select: none;
   pointer-events: none;
 }
-.equipment__number--left {
+.number--left {
   right: auto;
   left: 2rem;
   color: $color-blue;
+}
+@media screen and (max-width: 1500px) {
+  .card-equipment {
+    width: auto;
+    margin-left: 0;
+    margin-bottom: 25rem;
+  }
+}
+@media screen and (max-width: 1500px) {
+
 }
 </style>

@@ -1,18 +1,18 @@
 <template lang='pug'>
   .price
-    .price__container
-      .card.price__card(v-for='n in 3')
-        .line.card__line
-        .card__time
-          h2.time__title 30
-          span.time__subtitle min
-        .card__values
+    .container
+      .card.price-card(v-for='n in 3')
+        .line.card-line
+        .time
+          h2.time-title 30
+          span.time-subtitle min
+        .values
           span (main/student/school)
-          span.values__list 600/550/500
-        p.card__description
+          span.values-list 600/550/500
+        p.description
           | Hendrerit delicatissimi an cum, quo ea zril aperiri albucius. Vel te
           | vero vocent prompta, mei ferri antiopam corrumpit ut.
-    a.btn.price__action Book now
+    a.btn.price-action Book now
 </template>
 
 <script>
@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import '~style';
 
 .price {
@@ -31,39 +31,45 @@ export default {
   flex-direction: column;
   align-items: center;
 }
-.price__container {
+.container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8rem;
 }
-.price__card {
+.price-card {
   width: 20%;
   position: relative;
 }
-.card__line {
+.card-line {
   position: absolute;
   top: 3rem;
   left: 0;
   height: 6rem;
+  width: 0.6rem;
   background-color: $color-purple;
 }
-.time__title {
+.time-title {
   font-size: 7rem;
   margin: 0;
 }
-.time__subtitle {
+.time-subtitle {
   display: block;
   font-size: 2rem;
   font-weight: 500;
 }
-.card__time,
-.card__values {
+.time,
+.values {
   margin-bottom: 3rem;
 }
-.values__list {
+.values-list {
   display: block;
   font-size: 3.2rem;
   font-weight: 500;
   margin-top: 2rem;
+}
+@media screen and (max-width: 1100px) {
+  .time {
+    margin-bottom: 0.5rem;
+  }
 }
 </style>

@@ -1,13 +1,13 @@
 <template lang='pug'>
   .comments
-    .comments__card.card(v-for='n in 3')
-      .card__quote
-      p.card__description
+    .comments-card.card(v-for='n in 3')
+      .quote
+      p.description
         | Hendrerit delicatissimi an cum, quo ea zril aperiri albucius. Vel te
         | vero vocent prompta, mei ferri antiopam corrumpit ut.
-      .card__author
-        span.author__name Dr Emmett Brown, DeLorean
-        .author__img
+      .author
+        span.author-name Dr Emmett Brown, DeLorean
+        .author-img
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import '~style';
 
 .comments {
@@ -25,27 +25,27 @@ export default {
   display: flex;
   justify-content: space-between;
 }
-.comments__card {
+.comments-card {
   width: 20%;
   box-shadow: $shadow;
 }
-.card__quote {
+.quote {
   width: 8rem;
   height: 8rem;
 }
-.card__author {
+.author {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 3rem;
 }
-.author__name {
+.author-name {
   font-size: 2rem;
   font-weight: 500;
   color: $color-dark;
   margin-bottom: 1.5rem;
 }
-.author__img {
+.author-img {
   border-radius: 50%;
   background-color: $color-blue;
   width: 8rem;

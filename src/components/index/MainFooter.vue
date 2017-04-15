@@ -1,17 +1,17 @@
 <template lang='pug'>
   footer.footer
-    .footer__company
-      .company__info
-        h4.company__name IMENGINE
-        p.company__description
+    .company
+      .company-info
+        h4.company-name IMENGINE
+        p.company-description
           | An experience design collective curated by designers, for designers.
-      a.logo__link.company__logo
-    .footer__nav
-      .nav__page
-        a.footer__link(v-for='anchor in anchors'
+      a.logo-link.logo
+    .footer-nav
+      .nav
+        a.footer-link(v-for='anchor in anchors'
         @click='') {{ anchor }}
-      a.footer__licence Licence
-    p.footer__copyright
+      a.licence Licence
+    p.copyright
       | IMENGINE 2017. Design &amp; Development by #[span PXLHEAD]
 </template>
 
@@ -26,7 +26,7 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import '~style';
 
 .footer {
@@ -36,31 +36,40 @@ export default {
   flex-direction: column;
   padding-bottom: 4rem;
 }
-.footer__company {
+.company {
   background-color: $color-blue;
   padding: 2rem $padding-page;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.company__logo {
-  margin: 0;
+.logo, .main-nav {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
-.company__name {
+.logo-link {
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  margin-right: 1rem;
+  background: url('../../assets/logo.svg') no-repeat center / contain;
+}
+.company-name {
   font-weight: 400;
   letter-spacing: 0.5rem;
 }
-.footer__nav {
+.footer-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
   padding: 3rem $padding-page;
 }
-.footer__link {
+.footer-link {
   margin-right: 4rem;
 }
-.footer__copyright {
+.copyright {
   color: $color-gray;
   padding: 0 $padding-page;
   span {

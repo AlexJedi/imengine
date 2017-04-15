@@ -1,11 +1,11 @@
 <template lang='pug'>
   .slider
-    .slider__container
-      figure.card.slider__card(v-for='n in 3')
-        img.slider__card-img(src='../../assets/img/vrwoman.png')
-        figcaption.slider__card-title Dr Emmett Brown, DeLorean
+    .container
+      figure.card.slider-card(v-for='n in 3')
+        img.img(src='../../assets/img/vrwoman.png')
+        figcaption.title Dr Emmett Brown, DeLorean
       a.next-btn
-    router-link.btn.slider__action(to='gallery') View gallery
+    router-link.btn.slider-action(to='gallery') View gallery
 </template>
 
 <script>
@@ -14,32 +14,34 @@ export default {
 };
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import '~style';
-
+.slider-action {
+  text-decoration: none;
+}
 .slider {
-  background-color: $color-lightgray;
+  background-color: lighten($color-lightgray, 3);
   padding: $padding-page;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.slider__container {
+.container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8rem;
   position: relative;
 }
-.slider__card {
+.slider-card {
   width: 20%;
 }
-.slider__card-img {
+.img {
   width: 100%;
   height: auto;
   overflow: hidden;
   margin-bottom: 2rem;
 }
-.slider__card-title {
+.title {
   font-size: 2rem;
   font-weight: 500;
   color: $color-dark;
