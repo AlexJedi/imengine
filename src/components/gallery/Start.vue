@@ -12,6 +12,10 @@
       | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       | Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     .intro-img
+    a.btn-menu
+    aside.menu
+      nav.menu-nav
+        a.menu-link
 </template>
 
 <script>
@@ -22,6 +26,30 @@ export default {
 
 <style lang='scss' scoped>
 @import '~style';
+.btn-menu {
+  position: fixed;
+  z-index: 1000;
+  content: "";
+  width: 6rem;
+  height: 6rem;
+  top: 7rem;
+  left: 6rem;
+  background: url('../../assets/img/icons/menu.svg') no-repeat center / contain;
+  &:hover + .menu{
+    transform: translateX(0);
+  }
+}
+.menu {
+  position: fixed;
+  z-index: 1001;
+  top: calc(50% - 25vh);
+  left: 0;
+  width: 15rem;
+  height: 50vh;
+  background: $color-lightgray;
+  transform: translateX(-100%);
+  transition: transform 1s ease-in;
+}
 .logo {
   cursor: pointer;
   display: flex;
@@ -110,27 +138,42 @@ export default {
   background: url('../../assets/img/VR-Gallery.jpg') no-repeat center bottom / contain;
 }
 @media screen and (max-width: 1500px) {
-  .intro-title {
-    font-size: 12rem;
+  .text {
+    width: 41rem;
   }
   .intro-img {
-    width: 40vw;
-    height: 40vw;
-    right: 14rem;
+    right: 15rem;
+  }
+  .extra-title {
+    top: calc(50% - 10rem);
+    left: 25rem;
+    font-size: 35rem;
+  }
+  .title {
+    top: 55%;
+    left: 53%;
+    font-size: 17rem;
   }
 }
 @media screen and (max-width: 1100px) {
-  .intro-title {
-    position: absolute;
-    top: 0;
-    left: 15rem;
-    font-size: 10rem;
-    text-align: left;
+  .text {
+    width: 25rem;
+    height: 15rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .intro-img {
-    width: 50vw;
-    height: 50vw;
-    right: 4rem;
+    right: 10rem;
+  }
+  .extra-title {
+    top: calc(50% - 5rem);
+    left: 18rem;
+    font-size: 25rem;
+  }
+  .title {
+    top: 55%;
+    left: 51%;
+    font-size: 13rem;
   }
 }
 </style>
