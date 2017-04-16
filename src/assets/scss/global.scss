@@ -52,3 +52,15 @@ $border-radius: 5px;
   align-items: center;
   text-align: center;
 }
+
+.section-title {
+  position: absolute;
+  top: 45%;
+  right: 1rem;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: $color-white;
+  transform: rotate(90deg);
+  z-index: 100;
+  text-transform: uppercase;
+}
