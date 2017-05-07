@@ -46,7 +46,7 @@ export default {
   left: 0;
   width: 15rem;
   height: 50vh;
-  background: $color-lightgray;
+  background: $color-gray;
   transform: translateX(-100%);
   transition: transform 1s ease-in;
 }

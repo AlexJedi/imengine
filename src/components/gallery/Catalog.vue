@@ -1,7 +1,22 @@
 <template lang='pug'>
-  .intro
-    h1.intro-title Virtual #[span reality] experience
-    div.intro-img
+  .catalog
+    h2.title.section-title gallery
+    .gallery
+      .gallery-line
+        figure.card.slider-card(v-for='n in 5')
+          img.img(src='../../assets/img/vrwoman.png')
+          figcaption.title Dr Emmett Brown, DeLorean
+      .gallery-line
+        figure.card.slider-card(v-for='n in 5')
+          img.img(src='../../assets/img/vrwoman.png')
+          figcaption.title Dr Emmett Brown, DeLorean
+    .overlay
+    .modal.single-page
+      article.gallery-card
+        figure.gallery-img
+          img(src='https://unsplash.it/1920/1080/?random' alt='News')
+          figcaption.title Dr Emmett Brown, DeLorean
+          h2.author Dr Emmet Brown
 </template>
 
 <script>
@@ -13,34 +28,106 @@ export default {
 <style lang='scss' scoped>
 @import '~style';
 
-.intro {
-  height: 70vh;
+img{
+  width: auto;
+  height: 100%;
+}
+.catalog {
+  height: 100vh;
   width: 100%;
-  background-color: $color-blue;
+  background-color: $color-lightgray;
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  &:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 20%;
+    width: 100%;
+    background-color: $color-purple;
+  }
 }
-.intro-title {
-  font-size: 14rem;
-  text-transform: uppercase;
-  text-align: center;
-  color: $color-white;
-  text-shadow: 0px 2px 7px #1B85BE;
-  user-select: none;
-  pointer-events: none;
-  width: 80%;
-  span {
+.gallery {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  position: absolute;
+  left: 20%;
+  height: 70%;
+  width: 60%;
+  bottom: 0;
+  z-index: 100;
+}
+.gallery-line {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.slider-card {
+  width: 15%;
+  padding: 2rem;
+  img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: 500;
     color: $color-dark;
   }
 }
-.intro-img {
-  width: 35vw;
-  height: 35vw;
+.title {
+  color: $color-gray;
+}
+.single-page{
   position: absolute;
-  bottom: 0;
-  right: 20rem;
-  background: url('../../assets/img/vrman.png') no-repeat center bottom / contain;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  display: none;
+  justify-content: space-between;
+  z-index: 1001;
+  > .gallery-card {
+    position: relative;
+    width: 100%;
+    top: auto;
+    left: auto;
+    height: 100%;
+    background: $color-white;
+    box-shadow: $shadow;
+    display: flex;
+    > .gallery-img{
+      width: 100%;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    > .title {
+      position: absolute;
+      left: 4rem;
+      bottom: 10rem;
+      padding-bottom: 2rem;
+      font-size: 2.8rem;
+      text-align: center;
+      color: $color-white;
+      }
+    > .author {
+      position: absolute;
+      left: 4rem;
+      bottom: 2rem;
+      padding-bottom: 2rem;
+      font-size: 2.8rem;
+      text-align: center;
+      color: $color-white;
+    }
+    }
+  }
 }
 @media screen and (max-width: 1500px) {
   .intro-title {

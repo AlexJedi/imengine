@@ -12,7 +12,7 @@
         .article-header
           span.line.article-line
           span.article-tip Latest article
-        h2.article-title.section-title Reality or not?
+        h2.article-title.preview-title Reality or not?
         figure.article-img
           img(src='../../assets/img/glasses.png')
         .article-info
@@ -115,7 +115,7 @@ export default {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
-.section-title {
+.preview-title {
   font-size: 4.8rem;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
@@ -229,7 +229,7 @@ export default {
   .article-line {
     flex-basis: 50%;
   }
-  .section-title {
+  .preview-title {
     font-size: 3.8rem;
     letter-spacing: 0.3rem;
     text-transform: uppercase;
