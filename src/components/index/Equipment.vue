@@ -48,7 +48,7 @@ export default {
 @import '~style';
 
 .equipment {
-  background-color: $color-purple;
+  background: linear-gradient(to bottom, $color-blue 0%, $color-purple 100%);
   padding: $padding-page;
   position: relative;
 }

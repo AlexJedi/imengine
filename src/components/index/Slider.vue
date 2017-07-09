@@ -1,11 +1,20 @@
 <template lang='pug'>
   .slider
-    .container
-      figure.card.slider-card(v-for='n in 3')
-        img.img(src='../../assets/img/vrwoman.png')
-        figcaption.title Dr Emmett Brown, DeLorean
-      a.next-btn
-    router-link.btn.slider-action(to='gallery') View gallery
+    figure.card.slider-card.card-first
+      img.img(src='../../assets/img/vrwoman.png')
+      figcaption.title Dr Emmett Brown, DeLorean
+    figure.card.slider-card.card-second
+      img.img(src='../../assets/img/vrwoman.png')
+      figcaption.title Dr Emmett Brown, DeLorean
+    figure.card.slider-card.card-third
+      img.img(src='../../assets/img/vrwoman.png')
+      figcaption.title Dr Emmett Brown, DeLorean
+    figure.card.slider-card.card-fourth
+      img.img(src='../../assets/img/vrwoman.png')
+      figcaption.title Dr Emmett Brown, DeLorean
+    a.next-btn
+    a.prev-btn
+    router-link.btn.slider-action(to='gallery')
 </template>
 
 <script>
@@ -16,24 +25,64 @@ export default {
 
 <style lang='scss' scoped>
 @import '~style';
+
 .slider-action {
-  text-decoration: none;
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  top: 65%;
+  right: 17%;
+  background: $color-purple;
+  z-index: 1000;
+  border-radius: 0;
+  &:before {
+    position: absolute;
+    content: "";
+    top: calc(50% - 3rem);
+    right: calc(50% - 0.5rem);
+    background: $color-white;
+    width: 1rem;
+    height: 6rem;
+    transform: rotate(90deg);
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    top: calc(50% - 3rem);
+    right: calc(50% - 0.5rem);
+    background: $color-white;
+    width: 1rem;
+    height: 6rem;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
 }
 .slider {
-  background-color: lighten($color-lightgray, 3);
+  background-color: $color-white;
   padding: $padding-page;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  height: 80vh;
+  &:after {
+    position: absolute;
+    content: "";
+    top: 30%;
+    left: 0;
+    height: 40%;
+    width: 100%;
+    background-color: $color-lightgray;
+  }
 }
 .container {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8rem;
   position: relative;
+  z-index: 100;
 }
 .slider-card {
-  width: 20%;
+  width: 14%;
+  z-index: 102;
 }
 .img {
   width: 100%;
@@ -46,17 +95,50 @@ export default {
   font-weight: 500;
   color: $color-dark;
 }
+.card-first {
+  position: absolute;
+  top: 45%;
+  left: 7%;
+}
+.card-second {
+  position: absolute;
+  top: 10%;
+  left: 28%;
+}
+.card-third {
+  position: absolute;
+  top: 45%;
+  left:49%;
+}
+.card-fourth{
+  position: absolute;
+  top: 10%;
+  left:70%;
+}
 .next-btn {
   position: absolute;
-  width: 2rem;
-  height: 4rem;
-  top: calc(50% - 2rem);
-  right: -$padding-page + 2rem;
-  background: url('../../assets/img/icons/next.svg') no-repeat center center / 300%;
+  width: 6rem;
+  height: 40%;
+  top: 0;
+  right: 0;
+  background: $color-purple;
   cursor: pointer;
-  opacity: 0.6;
+  z-index: 101;
   &:hover {
-    opacity: 1;
+    opacity: 0.8;
+  }
+}
+.prev-btn {
+  position: absolute;
+  width: 6rem;
+  height: 40%;
+  bottom: 0;
+  left: 0;
+  background: $color-purple;
+  cursor: pointer;
+  z-index: 101;
+  &:hover {
+    opacity: 0.8;
   }
 }
 </style>
